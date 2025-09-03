@@ -1,0 +1,1 @@
+/home/ajrf/Documents/GitHub/Rastreador_de_systemcalls/rastreador/target/release/rastreador: /home/ajrf/Documents/GitHub/Rastreador_de_systemcalls/rastreador/src/main.rs /home/ajrf/Documents/GitHub/Rastreador_de_systemcalls/rastreador/src/sysdecode.rs
