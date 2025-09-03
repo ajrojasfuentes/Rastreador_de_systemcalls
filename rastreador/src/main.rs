@@ -126,7 +126,7 @@ fn parent_trace(child: Pid, opts: &Opts) -> ! {
             }
             Ok(WaitStatus::PtraceSyscall(pid)) => {
                 // Stop por entrada o salida de syscall
-                let st = per_tid.entry(pid).or_default();
+                let st = per_tid.entry(pid).or_insert_with(|| ThreadState { entering: true, last_syscall: 0 });
                 let regs = ptrace_getregs(pid).expect("GETREGS");
 
                 if st.entering {
